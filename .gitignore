@@ -1,0 +1,27 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+.gemini/
+*.zip
+
+# Database backups & temporary files
+server/database/backups/*.db
+server/database/*.db-wal
+server/database/*.db-shm
+
+# Android build artifacts
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+*.keystore
+!debug.keystore
+
+# Environment files
+.env
+.env.local
+

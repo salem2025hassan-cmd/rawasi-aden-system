@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1224"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050a14"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="35%" stop-color="#F3C64F"/>
+      <stop offset="70%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#996515"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0f2744"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background with subtle luxury border -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)"/>
+  <rect x="12" y="12" width="488" height="488" rx="98" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-opacity="0.4"/>
+
+  <!-- Brand Emblem Centered and Scaled -->
+  <g transform="translate(130, 80) scale(2.6)">
+    <!-- Tower 1 (Left) -->
+    <path d="M15,95 L15,40 L35,28 L35,95 Z" fill="url(#blueGrad)" opacity="0.9"/>
+    <rect x="20" y="38" width="4" height="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="28" y="38" width="4" height="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="20" y="50" width="4" height="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="28" y="50" width="4" height="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="20" y="62" width="4" height="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="28" y="62" width="4" height="6" fill="#ffffff" opacity="0.8"/>
+
+    <!-- Tower 2 (Center, Tallest) -->
+    <path d="M40,95 L40,12 L68,2 L68,95 Z" fill="url(#goldGrad)" filter="url(#glow)"/>
+    <rect x="46" y="20" width="5" height="7" fill="#0f172a" opacity="0.7"/>
+    <rect x="56" y="20" width="5" height="7" fill="#0f172a" opacity="0.7"/>
+    <rect x="46" y="34" width="5" height="7" fill="#0f172a" opacity="0.7"/>
+    <rect x="56" y="34" width="5" height="7" fill="#0f172a" opacity="0.7"/>
+    <rect x="46" y="48" width="5" height="7" fill="#0f172a" opacity="0.7"/>
+    <rect x="56" y="48" width="5" height="7" fill="#0f172a" opacity="0.7"/>
+    <rect x="46" y="62" width="5" height="7" fill="#0f172a" opacity="0.7"/>
+    <rect x="56" y="62" width="5" height="7" fill="#0f172a" opacity="0.7"/>
+
+    <!-- Tower 3 (Right) -->
+    <path d="M72,95 L72,25 L92,35 L92,95 Z" fill="url(#blueGrad)"/>
+    <rect x="76" y="40" width="4" height="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="84" y="40" width="4" height="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="76" y="52" width="4" height="6" fill="#ffffff" opacity="0.8"/>
+    <rect x="84" y="52" width="4" height="6" fill="#ffffff" opacity="0.8"/>
+
+    <!-- Swoosh -->
+    <path d="M5,100 Q 50,110 100,92 Q 55,102 5,100 Z" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Title inside App Icon -->
+  <text x="256" y="390" text-anchor="middle" font-family="'Cairo', 'Tajawal', sans-serif" font-weight="900" font-size="46" fill="#ffffff" letter-spacing="1">رواسي عدن</text>
+  <text x="256" y="430" text-anchor="middle" font-family="'Cairo', 'Tajawal', sans-serif" font-weight="700" font-size="20" fill="url(#goldGrad)" letter-spacing="1">للهندسة والمقاولات</text>
+</svg>

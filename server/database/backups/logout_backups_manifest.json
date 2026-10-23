@@ -1,0 +1,62 @@
+[
+  {
+    "fileName": "backup_logout_admin_2026-10-17_16-29-05.db",
+    "filePath": "C:\\Users\\user\\Desktop\\مشروع رواسي عدن الجاهز\\server\\database\\backups\\backup_logout_admin_2026-10-17_16-29-05.db",
+    "username": "admin",
+    "timestamp": "2026-10-17T13:29:05.036Z",
+    "displayTime": "١٧‏/١٠‏/٢٠٢٦، ٤:٢٩:٠٥ م",
+    "size": 229376,
+    "mode": "offline",
+    "notes": "تسجيل خروج المستخدم: admin (وضع أوفلاين محلي)"
+  },
+  {
+    "fileName": "backup_logout_علوي_2026-09-07_13-57-17.db",
+    "filePath": "C:\\Users\\a.ba3baid\\رواسي عدن\\server\\database\\backups\\backup_logout_علوي_2026-09-07_13-57-17.db",
+    "username": "علوي",
+    "timestamp": "2026-09-07T10:57:17.782Z",
+    "displayTime": "٠٧‏/٠٩‏/٢٠٢٦، ١:٥٧:١٧ م",
+    "size": 135168,
+    "mode": "offline",
+    "notes": "تسجيل خروج المستخدم: علوي (وضع أوفلاين محلي)"
+  },
+  {
+    "fileName": "backup_logout_admin_2026-09-07_13-35-22.db",
+    "filePath": "C:\\Users\\a.ba3baid\\رواسي عدن\\server\\database\\backups\\backup_logout_admin_2026-09-07_13-35-22.db",
+    "username": "admin",
+    "timestamp": "2026-09-07T10:35:22.377Z",
+    "displayTime": "٠٧‏/٠٩‏/٢٠٢٦، ١:٣٥:٢٢ م",
+    "size": 135168,
+    "mode": "offline",
+    "notes": "تسجيل خروج المستخدم: admin (وضع أوفلاين محلي)"
+  },
+  {
+    "fileName": "backup_logout_admin_2026-09-07_13-06-51.db",
+    "filePath": "C:\\Users\\a.ba3baid\\رواسي عدن\\server\\database\\backups\\backup_logout_admin_2026-09-07_13-06-51.db",
+    "username": "admin",
+    "timestamp": "2026-09-07T10:06:51.338Z",
+    "displayTime": "٠٧‏/٠٩‏/٢٠٢٦، ١:٠٦:٥١ م",
+    "size": 135168,
+    "mode": "offline",
+    "notes": "نسخة تجريبية عند تسجيل الخروج لاختبار حفظ التعديلات"
+  },
+  {
+    "fileName": "backup_logout_admin_2026-09-07_13-03-33.db",
+    "filePath": "C:\\Users\\a.ba3baid\\رواسي عدن\\server\\database\\backups\\backup_logout_admin_2026-09-07_13-03-33.db",
+    "username": "admin",
+    "timestamp": "2026-09-07T10:03:33.989Z",
+    "displayTime": "٠٧‏/٠٩‏/٢٠٢٦، ١:٠٣:٣٣ م",
+    "size": 135168,
+    "mode": "offline",
+    "notes": "تجربة النسخ التلقائي عند الخروج"
+  },
+  {
+    "fileName": "backup_logout_test_admin_2026-09-07_13-03-12.db",
+    "filePath": "C:\\Users\\a.ba3baid\\رواسي عدن\\server\\database\\backups\\backup_logout_test_admin_2026-09-07_13-03-12.db",
+    "username": "test_admin",
+    "timestamp": "2026-09-07T10:03:12.799Z",
+    "displayTime": "٠٧‏/٠٩‏/٢٠٢٦، ١:٠٣:١٢ م",
+    "size": 135168,
+    "mode": "offline",
+    "notes": "Test backup"
+  }
+]
