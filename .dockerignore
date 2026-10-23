@@ -1,0 +1,9 @@
+node_modules
+.git
+.gemini
+*.zip
+android/.gradle
+android/build
+android/app/build
+android/.idea
+npm-debug.log*

@@ -3,9 +3,9 @@ const path = require('node:path');
 const fs = require('node:fs');
 const connectionManager = require('./connectionManager');
 
-const dbDir = __dirname;
+const dbDir = process.env.DATABASE_DIR || __dirname;
 const dbPath = path.join(dbDir, 'rawasi_aden.db');
-const schemaPath = path.join(dbDir, 'schema.sql');
+const schemaPath = path.join(__dirname, 'schema.sql');
 
 if (!fs.existsSync(dbDir)) {
   fs.mkdirSync(dbDir, { recursive: true });
@@ -275,6 +275,16 @@ function initSchema() {
       SET balance = (SELECT COALESCE(SUM(balance), 0) FROM accounts WHERE parent_id = (SELECT id FROM accounts WHERE code = '112'))
       WHERE code = '112';
     `);
+    // التأكد من وجود مستخدمين، وإن لم يوجد يتم بذر البيانات تلقائياً
+    try {
+      const userRow = db.prepare("SELECT COUNT(*) as cnt FROM users").get();
+      if (!userRow || userRow.cnt === 0) {
+        console.log('⚡ قاعدة البيانات فارغة، جاري تجهيز البيانات الافتراضية وحساب المدير تلقائياً...');
+        require('./seed');
+      }
+    } catch (seedErr) {
+      console.warn('Auto-seed check note:', seedErr.message);
+    }
   } catch (clientAccErr) {
     console.warn('Migration note (clients accounting provisioning):', clientAccErr.message);
   }

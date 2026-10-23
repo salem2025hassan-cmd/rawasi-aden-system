@@ -49,11 +49,13 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(publicDir, 'index.html'));
 });
 
+const HOST = process.env.HOST || '0.0.0.0';
+
 // تشغيل الخادم
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log('===========================================================');
   console.log(`🚀 Rawasi Aden System Server is Running!`);
-  console.log(`🌐 System URL: http://localhost:${PORT}`);
+  console.log(`🌐 System URL: http://${HOST}:${PORT}`);
   console.log(`💼 Port: ${PORT}`);
   console.log('===========================================================');
 });
