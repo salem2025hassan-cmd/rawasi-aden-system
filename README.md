@@ -102,6 +102,24 @@ npm start
 
 ---
 
+## 🌐 النشر السحابي المجاني (1-Click Deploy)
+
+يمكنك نشر النظام وتشغيله سحابياً على الإنترنت بالكامل مع خادم Express وقاعدة بيانات SQLite عبر منصة **Render** بنقرة واحدة:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/salem2025hassan-cmd/rawasi-aden-system)
+
+👉 **رابط النشر المباشر على Render:**
+[https://render.com/deploy?repo=https://github.com/salem2025hassan-cmd/rawasi-aden-system](https://render.com/deploy?repo=https://github.com/salem2025hassan-cmd/rawasi-aden-system)
+
+---
+
+## 📱 تطبيق الأندرويد (APK)
+
+يتم بناء تطبيق الأندرويد تلقائياً عبر GitHub Actions عند كل تحديث:
+- [تحميل أحدث إصدار من تطبيق الأندرويد RawasiAden-App.apk](https://github.com/salem2025hassan-cmd/rawasi-aden-system/actions)
+
+---
+
 ## 🔑 بيانات الدخول الافتراضية
 
 - **اسم المستخدم:** `admin`
