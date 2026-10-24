@@ -183,9 +183,48 @@ const Auth = {
         }
       }
     } catch (err) {
-      console.error('Login error:', err);
+      console.warn('Backend server unreachable, checking demo mode fallback:', err);
+      // الدخول التلقائي بوضع المعاينة عند تصفح النسخة الثابتة على GitHub Pages
+      if (username === 'admin' || !username) {
+        console.log('🔄 تفعيل وضع المعاينة (Demo Mode)...');
+        this.token = 'offline_demo_token';
+        this.currentUser = {
+          id: 1,
+          username: 'admin',
+          full_name: 'المدير العام (وضع المعاينة)',
+          role: 'admin',
+          role_name: 'المدير العام',
+          permissions: ['*']
+        };
+        localStorage.setItem('rawasi_token', this.token);
+        localStorage.setItem('rawasi_user', JSON.stringify(this.currentUser));
+        this.showApp();
+        this.updateUserUI();
+        this.applyPermissions();
+
+        if (typeof App !== 'undefined') {
+          App.dbStatus = {
+            isOnline: false,
+            mode: 'demo',
+            activeDb: 'local_preview',
+            statusMessage: 'وضع المعاينة التفاعلي (GitHub Pages)'
+          };
+          if (App.updateConnectionUI) App.updateConnectionUI(App.dbStatus);
+          if (typeof App.showToast === 'function') {
+            App.showToast('مرحباً بك! تم الدخول في وضع المعاينة (Demo Mode). لتشغيل قاعدة البيانات الحقيقية استخدم http://localhost:5500', 'info');
+          }
+          if (App.navigate) App.navigate('dashboard');
+        }
+        return;
+      }
+
       if (errorBox) {
-        errorBox.textContent = 'تعذر الاتصال بالخادم، يرجى التأكد من تشغيل النظام.';
+        errorBox.innerHTML = `
+          <div>تعذر الاتصال بالخادم. يمكنك الدخول بوضع المعاينة التجريبي:</div>
+          <button type="button" class="btn btn-secondary" style="margin-top:8px; width:100%; padding:6px; font-size:0.85rem;" onclick="Auth.fillQuickLogin('admin', 'admin123'); Auth.submitLogin();">
+            الدخول المباشر بوضع المعاينة (Demo Mode)
+          </button>
+        `;
         errorBox.style.display = 'block';
       }
     } finally {
