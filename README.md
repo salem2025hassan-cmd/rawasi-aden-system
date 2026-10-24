@@ -102,9 +102,16 @@ npm start
 
 ---
 
-## 🌐 النشر السحابي المجاني (1-Click Deploy)
+## 🌐 رابط النظام المباشر على الإنترنت (Live Online)
 
-يمكنك نشر النظام وتشغيله سحابياً على الإنترنت بالكامل مع خادم Express وقاعدة بيانات SQLite عبر منصة **Render** بنقرة واحدة:
+🔗 **رابط النظام الرسمي المباشر:**
+### 👉 [https://salem2025hassan-cmd.github.io/rawasi-aden-system/](https://salem2025hassan-cmd.github.io/rawasi-aden-system/)
+
+---
+
+## ☁️ النشر السحابي الكامل (Render Backend)
+
+يمكنك أيضاً تشغيل خادم Express مع قاعدة البيانات السحابية عبر منصة **Render**:
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/salem2025hassan-cmd/rawasi-aden-system)
 
